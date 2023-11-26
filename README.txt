@@ -7,7 +7,7 @@
 以上两个文件需必须另存为utf-8 csv格式文件（重要）
 
 3. bond-method.txt
-bond成员接口文件
+bond成员接口文件，手工填写或者使用collect-network.sh脚本自动生成
 
 运行：
 1.配置文件填写完，上传到network-deploy/files目录
