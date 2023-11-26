@@ -1,4 +1,6 @@
 说明：
+网络配置脚本，配置服务器bond以及vlan网络
+
 修改server-network/files/目录下3个文件
 1. server-ipinfo.xlxs
 2. server-type.xlxs
@@ -9,9 +11,7 @@ bond成员接口文件
 
 运行：
 1.配置文件填写完，上传到network-deploy/files目录
-
 2.进入server-network目录下运行
-
 3.配置服务器网络
 ansible-playbook network.yml
 
