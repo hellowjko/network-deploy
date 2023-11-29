@@ -1,5 +1,6 @@
 说明：
 网络配置脚本，配置服务器bond以及vlan网络
+下载地址：https://github.com/hellowjko/network-deploy/releases
 
 修改server-network/files/目录下3个文件
 1. server-ipinfo.xlxs
