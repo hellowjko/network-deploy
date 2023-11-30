@@ -3,6 +3,13 @@
 最新版本v3.1
 下载地址：https://github.com/hellowjko/network-deploy/releases
 
+目录结构：
+files      存放服务器网络信息包括bond、vlan等
+playbook   存放playbook文件
+scripts    存放playbook调用的shell脚本文件
+start.sh   主运行文件
+hosts      ansible主机清单文件
+
 1、填写单元格内不能有空格（重要）
 2、子网掩码目前只支持网络前缀格式，例如24。暂不支持255.255.255.0格式
 3、以下有相关信息的需填写，无地址的留空
