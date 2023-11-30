@@ -53,8 +53,8 @@ ipv4/mask/gw：    前一列bond接口的IP地址/子网掩码/网关地址（�
 ......
 
 ############################################
-bond-method.txt填写每种类型服务器的bond成员接口,也可使用collect-netcard.sh脚本自动生成本文档，网卡名之间用/隔开
-bond-method.txt格式：
+bond-method.txt填写每种类型服务器的bond成员接口,也可自动生成本文档，网卡名之间用/隔开
+bond-method.txt文件格式：
 type1 bond0:eth0/eth1
 type1 bond1:enp0/enp1
 type1 bond2:enp2/enp3
