@@ -1,8 +1,7 @@
 说明：
 网络配置脚本，配置服务器bond以及vlan网络
+最新版本v3.1
 下载地址：https://github.com/hellowjko/network-deploy/releases
-
-分别另存为csv文件格式（重要）
 
 1、填写单元格内不能有空格（重要）
 2、子网掩码目前只支持网络前缀格式，例如24。暂不支持255.255.255.0格式
@@ -28,7 +27,7 @@ server-bond.csv根据IP地址规划表进行填写:
 
 type:       (必填)服务器类型代码，role角色一致可使用一种类型代码，每种类型不可重复，可自定义例如:type1,type2...
 ipmi:       带外地址
-sn:    	    每台服务器的sn各不相同（ 避免都为数字显示科学计数，规定格式：sn-序列号）
+sn:         每台服务器的sn各不相同（ 避免都为数字显示科学计数，规定格式：sn-序列号）
 role:        (选填)服务器类型，例如宿主机,弹性裸金属服务器...
 hostname:    主机名
 bond-name：   bond接口名称，如果有此接口但没有地址，只需填写接口名称
@@ -47,9 +46,8 @@ ipv4/mask/gw：    前一列bond接口的IP地址/子网掩码/网关地址（�
 ......
 
 ############################################
-bond-method.txt填写每种类型服务器的bond成员接口,也可使用collec-netcard.sh脚本自动生成本文档
-网卡名之间用/隔开
-例如:
+bond-method.txt填写每种类型服务器的bond成员接口,也可使用collect-netcard.sh脚本自动生成本文档，网卡名之间用/隔开
+bond-method.txt格式：
 type1 bond0:eth0/eth1
 type1 bond1:enp0/enp1
 type1 bond2:enp2/enp3
@@ -57,4 +55,8 @@ type2 bond0:eth2/eth3
 type2 bond1:enp0/enp1/enp2/enp3
 type2 bond2:enp4/enp5/enp6/enp7
 
-如需自动生成，请查看collect-netcard目录readme.txt文件
+如需自动生成：
+修改../hosts文件[type]部分
+每种类型服务器选择一个IP地址填写（选择没有缺少和不能识别的网卡的服务器），用户名密码修改完成，运行
+sh start.sh 01
+执行完会生成../files/bond-method.txt文件
