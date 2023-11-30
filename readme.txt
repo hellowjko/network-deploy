@@ -66,4 +66,4 @@ type2 bond2:enp4/enp5/enp6/enp7
 修改../hosts文件[type]部分
 每种类型服务器选择一个IP地址填写（选择没有缺少和不能识别的网卡的服务器），用户名密码修改完成，运行
 sh start.sh 01
-执行完会生成../files/bond-method.txt文件
+执行完会生成files/bond-method.txt文件
